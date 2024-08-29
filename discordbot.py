@@ -3,6 +3,8 @@ from distutils.sysconfig import PREFIX
 import discord
 from dotenv import load_dotenv
 import os
+import random
+
 load_dotenv()
 
 PREFIX = os.environ['PREFIX']
@@ -26,6 +28,13 @@ async def on_message(message):
 
     if message.content.startswith(f'{PREFIX}hello'):
         await message.channel.send('Hello!')
+
+    if message.content.startswith(f'{PREFIX}진영'):
+
+        lanes = ['블루', '레드']
+        index = random.randrange(0, len(lanes))
+
+        await message.channel.send(lanes[index])    
 
 
 try:
