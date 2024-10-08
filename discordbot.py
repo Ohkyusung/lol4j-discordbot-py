@@ -159,7 +159,7 @@ async def on_message(message):
         embed.set_image(url=match_image_url)
 
         # Footer에 점수 규칙 추가
-        embed.set_footer(text="🏅 승리 시 : +3점\n🏅 패배 시 : +1점\n🤷 참가팀 홀수로 매칭 불가 시 : +0.5점\n⏰ 10분 지각 시 : -0.5점\n⏰ 15분 초과 지각 시 : -1점, 몰수패\n경기 후 반드시 경기결과 채널에 경기결과를 남겨주세요.")
+        embed.set_footer(text="🏅 승리 시 : +3점\n🏅 패배 시 : +1점\n🤷 상대팀 불참으로 몰수승 혹은 참가팀 홀수로 매칭 불가 시 : +0.5점\n⏰ 10분 지각 시 : -0.5점\n⏰ 15분 초과 지각 시 : -1점, 몰수패\n경기 후 반드시 경기결과 채널에 경기결과를 남겨주세요.")
 
         # 결과를 보내기
         await message.channel.send(embed=embed)
@@ -170,7 +170,7 @@ async def on_message(message):
         maps = {
             "투혼": "https://i.ibb.co/FKzJVMN/image.png",  # 투혼 맵 이미지 URL
             "파이썬": "https://i.ibb.co/grDWWvN/image.png",  # 파이썬 맵 이미지 URL
-            "단장의능선": "https://i.ibb.co/pfgdbw0/image.png"  # 단장의 능선 맵 이미지 URL
+            "신-단장의능선": "https://i.ibb.co/pfgdbw0/image.png"  # 신-단장의 능선 맵 이미지 URL
         }
         
         # 랜덤 맵 선택
