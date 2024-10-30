@@ -159,7 +159,7 @@ async def on_message(message):
         embed.set_image(url=match_image_url)
 
         # Footer에 점수 규칙 추가
-        embed.set_footer(text="🏅 승리 시 : +3점\n🏅 패배 시 : +1점\n🤷 상대팀 불참으로 몰수승 혹은 참가팀 홀수로 매칭 불가 시 : +0.5점\n⏰ 10분 지각 시 : -0.5점\n⏰ 15분 초과 지각 시 : -1점, 몰수패\n경기 후 반드시 경기결과 채널에 경기결과를 남겨주세요.")
+        embed.set_footer(text="🏅 승리 시 : +3점\n🏅 패배 시 : +1점\n🤷 상대팀 불참으로 몰수승 : +3점\n🤷 참가팀 홀수로 매칭 불가 시 : +1점\n⏰ 10분 지각 시 : -0.5점\n⏰ 15분 초과 지각 시 : -1점, 몰수패\n경기 후 반드시 경기결과 채널에 경기결과를 남겨주세요.")
 
         # 결과를 보내기
         await message.channel.send(embed=embed)
